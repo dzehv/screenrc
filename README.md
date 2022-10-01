@@ -1,5 +1,7 @@
-## Min screen conf
+# screen conf
 
-```
+Install config:
+
+``` bash
 cp screenrc ~/.screenrc
 ```

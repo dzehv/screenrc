@@ -3,8 +3,12 @@ hardstatus alwayslastline
 hardstatus string "%w"
 caption always "%?%F%{= Gk}%:%{=u Gk}%?  %h %-024=%{+b} %C%a %D %d %M %Y%{= db}"
 
+# No auto title change (screen v4.5.0+)
+# defdynamictitle off
+# dynamictitle off
+
 # Reload conf
-# Ctrl-a : source $HOME/.screenrc
+# C-a :source $HOME/.screenrc
 # don't use the hardstatus line for system messages, use reverse video instead
 # (we'll be using it for the list of tab windows - see hardstatus alwayslastline
 # below)

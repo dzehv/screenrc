@@ -1,7 +1,7 @@
 hardstatus on
 hardstatus alwayslastline
 hardstatus string "%w"
-caption always "%?%F%{= Kk}%:%{=u kR}%?  %h %-024=%{+b} %C%a %D %d %M %Y%{= db}"
+caption always "%?%F%{= Gk}%:%{=u Gk}%?  %h %-024=%{+b} %C%a %D %d %M %Y%{= db}"
 
 # Reload conf
 # Ctrl-a : source $HOME/.screenrc
@@ -11,20 +11,20 @@ caption always "%?%F%{= Kk}%:%{=u kR}%?  %h %-024=%{+b} %C%a %D %d %M %Y%{= db}"
 # use the caption line for the computer name, load, hstatus (as set by zsh), & time
 # the caption line gets repeated for each window being displayed (using :split),
 # so we'll use color cues to differentiate the caption of the current, active
-# CAPTION:
-# window, and the others.
-#    always                  - display the caption continuously.  Since
+#
+# CAPTION: window, and the others:
+#    always                  - display the caption continuously. Since
 #                              hardstatus is 'alwayslastline', it will be on the
 #                              next to last line.
-#    "%?%F"                  - if (leading '%?') this region has focus ('%F') 
+#    "%?%F"                  - if (leading '%?') this region has focus ('%F')
 #                              (e.g. it's the only region being displayed, or,
 #                              if in split-screen mode, it's the currently active
 #                              region)
-#      "%{= Kk}"               - set the colorscheme to blac[k] on grey (bright blac[K]),
+#    "%{= Kk}"               - set the colorscheme to blac[k] on grey (bright blac[K]),
 #                                with no other effects (standout, underline, etc.)
 #    "%:"                    - otherwise ('%:' between a pair of '%?'s)
-#      "%{=u kR}"              - set the colorscheme to [R]ed on blac[k], and
-#                                underline it, but no other effects (bold, standout, etc.) 
+#    "%{=u kR}"              - set the colorscheme to [R]ed on blac[k], and
+#                                underline it, but no other effects (bold, standout, etc.)
 #    "%?"                    - end if (trailing '%?')
 #    "  %h "                 - print two spaces, tthne the [h]ardstatus of the
 #                              current tab window (as set by zsh - see zshrc) and
@@ -47,7 +47,9 @@ caption always "%?%F%{= Kk}%:%{=u kR}%?  %h %-024=%{+b} %C%a %D %d %M %Y%{= db}"
 #    "%{= dd}"               - revert to the [d]efault background and [d]efault
 #                              foreground colors, respectively, with no ('= ')
 #                              other effects.
-#  other things that might be useful later are
+#
+#
+# Other things that might be useful later are:
 #    " %H"                   - print a space, then the [H]ostname.
 #    "(%{.K}%l%{-}):"        - print a '(', then change the text color to grey
 #                              (aka bright blac[K]), and print the current system
@@ -64,6 +66,7 @@ caption always "%?%F%{= Kk}%:%{=u kR}%?  %h %-024=%{+b} %C%a %D %d %M %Y%{= db}"
 #                              the rest of the caption string is justified
 #                              against the right edge of the screen.
 #                              NOTE: doesn't appear to truncate previous text.
+#
 # HARDSTATUS:
 # use the hardstatus line for the window list
 #    alwayslastline      - always display the hardstatus as the last line of the
